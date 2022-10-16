@@ -10,6 +10,11 @@ namespace Undine.MonoGame.Extended.Entities
     {
         private Entity entity;
 
+        public MGEEntity(Entity entity)
+        {
+            this.entity = entity;
+        }
+
         public void AddComponent<A>(in A component) where A : struct
         {
             entity.Attach(new MGEComponentWrapper<A>() { Component = component });

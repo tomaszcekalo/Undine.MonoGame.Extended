@@ -8,10 +8,13 @@ namespace Undine.MonoGame.Extended.Entities
 {
     public class MGEContainer : EcsContainer
     {
-        public WorldBuilder WorldBuilder { get; set; } = new WorldBuilder();
+        public WorldBuilder WorldBuilder { get; }
+        public World World { get; }
 
         public MGEContainer()
         {
+            this.WorldBuilder = new WorldBuilder();
+            this.World = this.WorldBuilder.Build();
         }
 
         public override void AddSystem<A>(UnifiedSystem<A> system)
@@ -60,7 +63,7 @@ namespace Undine.MonoGame.Extended.Entities
 
         public override IUnifiedEntity CreateNewEntity()
         {
-            throw new NotImplementedException();
+            return new MGEEntity(World.CreateEntity());
         }
     }
 }
