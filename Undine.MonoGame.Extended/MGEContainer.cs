@@ -14,46 +14,75 @@ namespace Undine.MonoGame.Extended.Entities
         public MGEContainer()
         {
             this.WorldBuilder = new WorldBuilder();
-            this.World = this.WorldBuilder.Build();
+            //this.World = this.WorldBuilder.Build();
         }
 
         public override void AddSystem<A>(UnifiedSystem<A> system)
         {
+            this.WorldBuilder.AddSystem(
+                new MGESystem<A>()
+                {
+                    System = system
+                });
         }
 
         public override void AddSystem<A, B>(UnifiedSystem<A, B> system)
         {
-            throw new NotImplementedException();
+            this.WorldBuilder.AddSystem(
+                new MGESystem<A, B>()
+                {
+                    System = system
+                });
         }
 
         public override void AddSystem<A, B, C>(UnifiedSystem<A, B, C> system)
         {
-            throw new NotImplementedException();
+            this.WorldBuilder.AddSystem(
+                new MGESystem<A, B, C>()
+                {
+                    System = system
+                });
         }
 
         public override void AddSystem<A, B, C, D>(UnifiedSystem<A, B, C, D> system)
         {
-            throw new NotImplementedException();
+            this.WorldBuilder.AddSystem(
+                new MGESystem<A, B, C, D>()
+                {
+                    System = system
+                });
         }
 
         public override ISystem GetSystem<A>(UnifiedSystem<A> system)
         {
-            throw new NotImplementedException();
+            return new MGESystem<A>()
+            {
+                System = system
+            };
         }
 
         public override ISystem GetSystem<A, B>(UnifiedSystem<A, B> system)
         {
-            throw new NotImplementedException();
+            return new MGESystem<A, B>()
+            {
+                System = system
+            };
         }
 
         public override ISystem GetSystem<A, B, C>(UnifiedSystem<A, B, C> system)
         {
-            throw new NotImplementedException();
+            return new MGESystem<A, B, C>()
+            {
+                System = system
+            };
         }
 
         public override ISystem GetSystem<A, B, C, D>(UnifiedSystem<A, B, C, D> system)
         {
-            throw new NotImplementedException();
+            return new MGESystem<A, B, C, D>()
+            {
+                System = system
+            };
         }
 
         public override void Run()
