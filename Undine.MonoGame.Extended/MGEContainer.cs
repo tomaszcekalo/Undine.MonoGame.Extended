@@ -9,7 +9,9 @@ namespace Undine.MonoGame.Extended.Entities
     public class MGEContainer : EcsContainer
     {
         public WorldBuilder WorldBuilder { get; }
-        public World World { get; }
+        public World World { get; private set; }
+        public bool WasWorldBuilt { get; private set; }
+        public IGameTimeProvider GameTimeProvider { get; set; }
 
         public MGEContainer()
         {
@@ -87,7 +89,13 @@ namespace Undine.MonoGame.Extended.Entities
 
         public override void Run()
         {
-            throw new NotImplementedException();
+            World.Update(GameTimeProvider.GameTime);
+        }
+
+        private void BuildWorld()
+        {
+            WasWorldBuilt = true;
+            this.World = this.WorldBuilder.Build();
         }
 
         public override IUnifiedEntity CreateNewEntity()
