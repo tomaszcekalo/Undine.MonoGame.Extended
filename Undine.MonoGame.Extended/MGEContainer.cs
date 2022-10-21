@@ -92,7 +92,7 @@ namespace Undine.MonoGame.Extended.Entities
             World.Update(GameTimeProvider.GameTime);
         }
 
-        private void BuildWorld()
+        public override void Init()
         {
             WasWorldBuilt = true;
             this.World = this.WorldBuilder.Build();
