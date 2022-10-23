@@ -16,7 +16,7 @@ namespace Undine.MonoGame.Extended.Entities
         public UnifiedSystem<A> System { get; set; }
 
         public MGESystem()
-            : base(Aspect.All(typeof(A)))
+            : base(Aspect.All(typeof(MGEComponentWrapper<A>)))
         {
         }
 
@@ -51,7 +51,9 @@ namespace Undine.MonoGame.Extended.Entities
         public UnifiedSystem<A, B> System { get; set; }
 
         public MGESystem()
-            : base(Aspect.All(typeof(A), typeof(B)))
+            : base(Aspect.All(
+                typeof(MGEComponentWrapper<A>),
+                typeof(MGEComponentWrapper<B>)))
         {
         }
 
@@ -90,7 +92,10 @@ namespace Undine.MonoGame.Extended.Entities
         public UnifiedSystem<A, B, C> System { get; set; }
 
         public MGESystem()
-            : base(Aspect.All(typeof(A), typeof(B), typeof(C)))
+            : base(Aspect.All(
+                typeof(MGEComponentWrapper<A>),
+                typeof(MGEComponentWrapper<B>),
+                typeof(MGEComponentWrapper<C>)))
         {
         }
 
@@ -133,7 +138,11 @@ namespace Undine.MonoGame.Extended.Entities
         public UnifiedSystem<A, B, C, D> System { get; set; }
 
         public MGESystem()
-            : base(Aspect.All(typeof(A), typeof(B), typeof(C), typeof(D)))
+            : base(Aspect.All(
+                typeof(MGEComponentWrapper<A>),
+                typeof(MGEComponentWrapper<B>),
+                typeof(MGEComponentWrapper<C>),
+                typeof(MGEComponentWrapper<D>)))
         {
         }
 

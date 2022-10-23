@@ -12,6 +12,7 @@ var container = new MGEContainer()
 container.AddSystem(new SpeedSystem());
 container.AddSystem(new AccelerationSystem());
 container.Init();
+
 var entity = container.CreateNewEntity();
 entity.AddComponent(new PositionComponent());
 entity.AddComponent(new VelocityComponent()
@@ -25,7 +26,7 @@ entity.AddComponent(new AccelerationComponent()
     y = -1
 });
 
-for (int i = 0; i < 10; i++)
+for (int i = 0; i < 20; i++)
 {
     container.Run();
     Console.WriteLine("Y =" + entity.GetComponent<PositionComponent>().y);
