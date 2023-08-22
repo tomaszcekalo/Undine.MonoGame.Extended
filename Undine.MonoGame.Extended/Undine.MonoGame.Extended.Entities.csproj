@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -10,13 +10,23 @@
     <RepositoryUrl>https://github.com/tomaszcekalo/Undine.MonoGame.Extended</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>monogame;ecs;entity;component;system;undine;extended</PackageTags>
+	  <Version>1.0.1</Version>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MonoGame.Extended.Entities" Version="3.8.0" />
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" />
-    <PackageReference Include="Undine.Core" Version="0.0.0.2" />
-    <PackageReference Include="Undine.MonoGame" Version="0.0.4" />
+    <PackageReference Include="Undine.Core" Version="0.0.0.6" />
+    <PackageReference Include="Undine.MonoGame" Version="0.0.6" />
   </ItemGroup>
 
 </Project>

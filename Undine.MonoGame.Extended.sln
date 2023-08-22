@@ -5,7 +5,9 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Undine.MonoGame.Extended.Entities", "Undine.MonoGame.Extended\Undine.MonoGame.Extended.Entities.csproj", "{6BDFB8DE-67D1-4CF6-9E58-386CE7AD7A79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Undine.MonoGame.Extended.Entities.Console", "Undine.MonoGame.Extended.Entities.Console\Undine.MonoGame.Extended.Entities.Console.csproj", "{723D95CA-17D8-4DF0-BAB9-6A4E9FE7336C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Undine.MonoGame.Extended.Entities.Console", "Undine.MonoGame.Extended.Entities.Console\Undine.MonoGame.Extended.Entities.Console.csproj", "{723D95CA-17D8-4DF0-BAB9-6A4E9FE7336C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Undine.MonoGame.Extended.Entities.Tests", "Undine.MonoGame.Extended.Entities.Tests\Undine.MonoGame.Extended.Entities.Tests.csproj", "{31E6E0CD-6CA9-41DC-8FC9-CBAAB65792BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{723D95CA-17D8-4DF0-BAB9-6A4E9FE7336C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{723D95CA-17D8-4DF0-BAB9-6A4E9FE7336C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{723D95CA-17D8-4DF0-BAB9-6A4E9FE7336C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31E6E0CD-6CA9-41DC-8FC9-CBAAB65792BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31E6E0CD-6CA9-41DC-8FC9-CBAAB65792BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31E6E0CD-6CA9-41DC-8FC9-CBAAB65792BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31E6E0CD-6CA9-41DC-8FC9-CBAAB65792BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
