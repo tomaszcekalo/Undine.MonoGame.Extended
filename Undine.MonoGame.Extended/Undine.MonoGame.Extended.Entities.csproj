@@ -10,9 +10,9 @@
     <RepositoryUrl>https://github.com/tomaszcekalo/Undine.MonoGame.Extended</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>monogame;ecs;entity;component;system;undine;extended</PackageTags>
-	  <Version>1.0.2</Version>
-	  <PackageReadmeFile>README.md</PackageReadmeFile>
-	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<Version>1.0.3</Version>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,7 +25,7 @@
   <ItemGroup>
     <PackageReference Include="MonoGame.Extended.Entities" Version="3.8.0" />
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" />
-    <PackageReference Include="Undine.Core" Version="0.0.0.6" />
+    <PackageReference Include="Undine.Core" Version="0.0.0.8" />
     <PackageReference Include="Undine.MonoGame" Version="0.0.7" />
   </ItemGroup>
 
