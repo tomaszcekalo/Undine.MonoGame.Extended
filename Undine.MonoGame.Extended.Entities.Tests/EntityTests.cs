@@ -41,6 +41,20 @@ namespace Undine.MonoGame.Extended.Entities.Tests
 
             ref var component = ref entity.GetComponent<AComponent>();
             Assert.IsNotNull(component);
-        }//
+        }
+        [TestMethod]
+        public void ComponentCanBeRemoved()
+        {
+            var container = new MGEContainer();
+            var mock = Substitute.For<UnifiedSystem<AComponent>>();
+            container.AddSystem(mock);
+            container.Init();
+            var entity = (MGEEntity)container.CreateNewEntity();
+            entity.AddComponent(new AComponent());
+
+            ref var component = ref entity.GetComponent<AComponent>();
+            entity.RemoveComponent<AComponent>();
+            Assert.IsFalse(entity.HasComponent<AComponent>());
+        }
     }
 }

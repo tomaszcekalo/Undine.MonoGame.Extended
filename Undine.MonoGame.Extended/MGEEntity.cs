@@ -1,28 +1,35 @@
 ﻿using MonoGame.Extended.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Undine.Core;
 
 namespace Undine.MonoGame.Extended.Entities
 {
     public class MGEEntity : IUnifiedEntity
     {
-        private Entity entity;
+        public Entity Entity { get; set; }
 
         public MGEEntity(Entity entity)
         {
-            this.entity = entity;
+            this.Entity = entity;
         }
 
         public void AddComponent<A>(in A component) where A : struct
         {
-            entity.Attach(new MGEComponentWrapper<A>() { Component = component });
+            Entity.Attach(new MGEComponentWrapper<A>() { Component = component });
         }
 
         public ref A GetComponent<A>() where A : struct
         {
-            return ref entity.Get<MGEComponentWrapper<A>>().Component;
+            return ref Entity.Get<MGEComponentWrapper<A>>().Component;
+        }
+
+        public void RemoveComponent<A>() where A : struct
+        {
+            Entity.Detach<MGEComponentWrapper<A>>();
+        }
+
+        public bool HasComponent<A>() where A : struct
+        {
+            return Entity.Has<MGEComponentWrapper<A>>();
         }
     }
 }

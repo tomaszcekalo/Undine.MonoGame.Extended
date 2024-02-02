@@ -102,5 +102,14 @@ namespace Undine.MonoGame.Extended.Entities
         {
             return new MGEEntity(World.CreateEntity());
         }
+
+        public override void DeleteEntity(IUnifiedEntity entity)
+        {
+            var entityToDestroy= entity as MGEEntity;
+            if(entityToDestroy is not null)
+            {
+                World.DestroyEntity(entityToDestroy.Entity);
+            }
+        }
     }
 }
