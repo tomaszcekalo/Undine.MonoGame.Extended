@@ -24,7 +24,7 @@
 
   <ItemGroup>
     <PackageReference Include="MonoGame.Extended.Entities" Version="3.8.0" />
-    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.4.1" />
     <PackageReference Include="Undine.Core" Version="0.0.0.9" />
     <PackageReference Include="Undine.MonoGame" Version="0.0.7" />
   </ItemGroup>
